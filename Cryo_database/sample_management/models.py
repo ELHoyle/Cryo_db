@@ -21,6 +21,10 @@ class Location(models.Model):
     rack = models.CharField(max_length = 20)
     pie = models.CharField(max_length = 20)
     cell_count = models.CharField(max_length = 20) #required
+
+    class Meta:
+        unique_together = ('tank', 'rack', 'pie')
+    
     def __str__(self):
             return f"tank: {self.tank}, rack: {self.rack}, pie: {self.pie}"
 
