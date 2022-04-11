@@ -26,5 +26,5 @@ class Location(models.Model):
         unique_together = ('tank', 'rack', 'pie')
     
     def __str__(self):
-            return f"tank: {self.tank}, rack: {self.rack}, pie: {self.pie}"
+            return f"Tank: {self.tank}, Rack: {self.rack}, Pie: {self.pie}"
 
